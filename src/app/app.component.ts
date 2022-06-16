@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ConfigService} from "./config/config.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'restcalls';
+  constructor(private configService: ConfigService) {
+
+  }
+  name: string | undefined;
+  email: string | undefined;
+
+  save() {
+    this.configService.save({name: this.name, email: this.email}).subscribe();
+  }
 }
