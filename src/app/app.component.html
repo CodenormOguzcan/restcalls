@@ -1,22 +1,16 @@
+
 <div class="form4 top">
   <div class="container">
     <div class="row">
       <div class="col-md-7 col-md-offset-2">
         <div class="form-bg">
-          <form class="form">
-            <div class="form-group">
-              <label class="sr-only">Name</label>
-              <input type="text" class="form-control" [(ngModel)]="name" name="name" required="" id="nameNine" placeholder="Your Name">
-            </div>
-            <div class="form-group">
-              <label class="sr-only">Email</label>
-              <input type="email" class="form-control" [(ngModel)]="email" name="email" delrequired="" id="emailNine" placeholder="Email Address">
-            </div>
-            <button type="button" class="btn text-center btn-blue" (click)="save()"> User hinzufügen</button>
 
-          </form>
+          <a routerLink="userlist" class="btn-warning btn">User List</a>
+          <a routerLink="addUser" class="btn-warning btn m-1">Add User</a>
+          <router-outlet></router-outlet>
         </div>
       </div>
     </div>
   </div>
 </div>
+
